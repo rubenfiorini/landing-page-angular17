@@ -8,3 +8,8 @@ img{
   height: 75%;
   object-fit: cover;
 }
+
+.color-base{
+  background-color: black;
+  color: white;
+}

@@ -1,1 +1,18 @@
-<p>product-detail works!</p>
+<h1>Detalle del producto</h1>
+<div class="container">
+    @if (loading){
+        <h5>Carcando...</h5>
+    } @else {
+            <div class="card" style="width: 18rem;">
+                <img src="{{product?.image}}" class="card-img-top" alt="{{product?.title}}">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p>{{ product?.price | currency }}</p>
+                  <p class="card-text">{{ product?.description }}</p>
+                  <a href="#" class="btn btn-primary">Agregar al carrito</a>
+                </div>
+              </div>
+    }
+</div>
+
+

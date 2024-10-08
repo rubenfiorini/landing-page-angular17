@@ -1,1 +1,25 @@
-<p>products works!</p>
+<h1>Nuestros productos</h1>
+<div class="container">
+<table class="table table-dark table-striped">
+    <thead>
+        <tr>
+        <th scope="col">#</th>
+        <th scope="col">Protucto</th>
+        <th scope="col">Precio</th>
+        <th scope="col">Descripcion</th>
+        <th scope="col">Detalle</th>
+        </tr>
+    </thead>
+    <tbody>
+        @for (producto of productList; track $index) {
+            <tr>
+                <th scope="row">{{producto.id}}</th>
+                <td>{{producto.category}}</td>
+                <td>{{producto.price | currency}}</td>
+                <td>{{producto.description}}</td>
+                <td><button type="button" class="btn btn-outline-primary" (click)="detalleProducto(producto.id)">Detalles</button></td>
+            </tr>
+        }
+    </tbody>
+    </table>
+</div>
